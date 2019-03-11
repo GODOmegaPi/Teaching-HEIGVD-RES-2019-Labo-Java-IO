@@ -9,6 +9,10 @@ public class Utils {
 
     private static final Logger LOG = Logger.getLogger(Utils.class.getName());
 
+    public static final String WINDOWS = "\r\n";
+    public static final String UNIX = "\n";
+    public static final String MACOS = "\r";
+
     /**
      * This method looks for the next new line separators (\r, \n, \r\n) to extract
      * the next line in the string passed in arguments.
@@ -19,10 +23,6 @@ public class Utils {
      * contain any line separator, then the first element is an empty string.
      */
     public static String[] getNextLine(String lines) {
-        final String WINDOWS = "\r\n";
-        final String UNIX = "\n";
-        final String MACOS = "\r";
-
         String[] newLines = {"", ""};
 
         if (lines.contains(UNIX) && !lines.contains(WINDOWS)) { //UNIX
