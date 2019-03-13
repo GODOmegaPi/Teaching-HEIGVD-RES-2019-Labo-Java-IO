@@ -139,8 +139,7 @@ public class Application implements IApplication {
             @Override
             public void visit(File file) {
                 try {
-                    writer.write(file.getPath());
-                    writer.write('\n');
+                    writer.write(file.getPath() + '\n');
                 } catch (IOException e) {
                     LOG.info(e.toString());
                 }
