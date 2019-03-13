@@ -142,6 +142,7 @@ public class Application implements IApplication {
                     writer.write(file.getPath());
                     writer.write('\n');
                 } catch (IOException e) {
+                    LOG.info(e.toString());
                 }
             }
         });
